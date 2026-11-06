@@ -1,11 +1,88 @@
+
 <!DOCTYPE html>
 <html lang="fi">
 <head>
-<meta charset="UTF-8">
-<title>Ensimmäinen sivuni</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etusivu – Lapuan Lepakot ry</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h1>Hei, olen Ilona, vai olenko</h1>
-<p>Tämä on ensimmäinen sivuni.</p>
+
+    <header>
+        <h1>Lapuan Lepakot ry</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Etusivu</a></li>
+                <li><a href="about.html">Seura</a></li>
+                <li><a href="listing.html">Ottelut ja harjoitukset</a></li>
+                <li><a href="contact.html">Kokeiluharjoitus</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <h2>Tervetuloa Lapuan Lepakoihin!</h2>
+
+            <p>
+                Lapuan Lepakot ry on lapualainen salibandyseura,
+                jossa liikunnan ilo, yhteisöllisyys ja hyvä
+                joukkuehenki ovat kaiken keskiössä.
+                Toimintaamme kuuluu juniori-, miesten ja naisten joukkueita.
+            </p>
+
+            <p>
+                Meillä jokainen on tervetullut mukaan!
+                Tutustu joukkueisiimme, seuraa tulevia otteluita
+                ja löydä itsellesi sopiva tapa harrastaa salibandya.
+            </p>
+
+            <a href="listing.html" class="button">
+                Katso ottelut ja harjoitusajat
+            </a>
+
+            <a href="contact.html" class="button">
+                Tule kokeilemaan salibandya!
+            </a>
+        </section>
+
+        <section class="highlights">
+            <h2>Lapuan Lepakot lyhyesti</h2>
+
+            <div class="highlight-card">
+                <h3>Ottelut</h3>
+                <p>
+                    Katso tulevat pelit ja edellisten otteluiden tulokset.
+                </p>
+                <a href="listing.html">Ottelutiedot</a>
+            </div>
+
+            <div class="highlight-card">
+                <h3>Harjoitukset</h3>
+                <p>
+                    Tutustu joukkueiden harjoitusaikoihin ja -paikkoihin.
+                </p>
+                <a href="listing.html">Harjoitusajat</a>
+            </div>
+
+            <div class="highlight-card">
+                <h3>Uudet pelaajat</h3>
+                <p>
+                    Salibandy kiinnostaa? Tule maksuttomaan
+                    kokeiluharjoitukseen!
+                </p>
+                <a href="contact.html">Ilmoittaudu mukaan</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Lapuan Lepakot ry</p>
+        <p>Yhdessä enemmän – salibandyn iloa Lapualla!</p>
+    </footer>
+
 </body>
 </html>

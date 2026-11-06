@@ -1,0 +1,67 @@
+/* Yleiset asetukset */
+:root {
+	--color-text: #12343b;
+	--color-background: #eef6f4;
+	--color-primary: #e8742a;
+	--content-width: 1100px;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	color: var(--color-text);
+	background: var(--color-background);
+	font-family: Arial, Helvetica, sans-serif;
+	line-height: 1.6;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+a {
+	color: var(--color-primary);
+}
+
+.container {
+	width: min(100% - 2rem, var(--content-width));
+	margin-inline: auto;
+}
+
+header,
+main,
+footer {
+	padding-block: 1.5rem;
+}
+
+button,
+.button {
+	display: inline-block;
+	padding: 0.65rem 1rem;
+	border: 0;
+	border-radius: 0.35rem;
+	color: #fff;
+	background: var(--color-primary);
+	font: inherit;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+@media (max-width: 600px) {
+	header,
+	main,
+	footer {
+		padding-block: 1rem;
+	}
+}

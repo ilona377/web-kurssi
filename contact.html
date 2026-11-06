@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kokeiluharjoitus – Lapuan Lepakot ry</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Lapuan Lepakot ry</h1>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Etusivu</a></li>
+                <li><a href="about.html">Seura</a></li>
+                <li><a href="listing.html">Ottelut ja harjoitukset</a></li>
+                <li><a href="contact.html">Kokeiluharjoitus</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact">
+            <h2>Ilmoittaudu maksuttomaan kokeiluharjoitukseen!</h2>
+
+            <p>
+                Haluaisitko kokeilla salibandya?
+                Lapuan Lepakot toivottaa uudet pelaajat tervetulleiksi!
+                Aikaisempaa kokemusta ei tarvita.
+            </p>
+
+            <p>
+                Täytä alla oleva lomake, niin pääset tutustumaan
+                seuraamme ja harjoituksiimme.
+            </p>
+
+            <form id="registrationForm">
+
+                <div class="form-group">
+                    <label for="name">Pelaajan nimi *</label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Etunimi ja sukunimi"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="age">Pelaajan ikä *</label>
+                    <input
+                        type="number"
+                        id="age"
+                        name="age"
+                        min="4"
+                        max="100"
+                        placeholder="Ikä vuosina"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Sähköpostiosoite *</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="esimerkki@email.com"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Puhelinnumero</label>
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="040 123 4567"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="team">Mihin joukkueeseen haluaisit tutustua? *</label>
+
+                    <select id="team" name="team" required>
+                        <option value="">Valitse joukkue</option>
+                        <option value="juniorit">Juniorit</option>
+                        <option value="miehet">Miesten joukkue</option>
+                        <option value="naiset">Naisten joukkue</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Lisätietoja</label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="4"
+                        placeholder="Voit kirjoittaa tähän esimerkiksi aiemmasta pelikokemuksesta."
+                    ></textarea>
+                </div>
+
+                <p class="required-info">* Pakolliset kentät</p>
+
+                <button type="submit" class="button">
+                    Lähetä ilmoittautuminen
+                </button>
+
+            </form>
+
+            <div id="successMessage" class="success-message" hidden>
+                <h3>Ilmoittautuminen onnistui!</h3>
+                <p>
+                    Kiitos ilmoittautumisestasi!
+                    Olemme iloisia, että haluat tulla tutustumaan
+                    Lapuan Lepakoiden toimintaan.
+                </p>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Lapuan Lepakot ry</p>
+        <p>Yhdessä enemmän – salibandyn iloa Lapualla!</p>
+    </footer>
+
+    <script>
+        const form = document.getElementById("registrationForm");
+        const successMessage = document.getElementById("successMessage");
+
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            if (!form.checkValidity()) {
+                form.reportValidity();
+                return;
+            }
+
+            successMessage.hidden = false;
+            form.reset();
+
+            successMessage.scrollIntoView({
+                behavior: "smooth",
+                block: "center"
+            });
+        });
+    </script>
+
+</body>
+</html>
