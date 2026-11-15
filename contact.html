@@ -1,156 +1,141 @@
-
 <!DOCTYPE html>
 <html lang="fi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kokeiluharjoitus – Lapuan Lepakot ry</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kokeiluharjoitus – Lapuan Lepakot ry</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <a class="ohituslinkki" href="#sisalto">Siirry sisältöön</a>
 
-    <header>
-        <h1>Lapuan Lepakot ry</h1>
+  <header class="ylatunniste">
+    <div class="ylatunniste__sisalto">
+      <a class="logo" href="index.html">Lapuan <span>Lepakot</span></a>
+      <nav class="navigaatio" aria-label="Päävalikko">
+        <ul>
+          <li><a href="index.html">Etusivu</a></li>
+          <li><a href="about.html">Seura</a></li>
+          <li><a href="listing.html">Ottelut ja harjoitukset</a></li>
+          <li><a href="contact.html" aria-current="page">Kokeiluharjoitus</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-        <nav>
-            <ul>
-                <li><a href="index.html">Etusivu</a></li>
-                <li><a href="about.html">Seura</a></li>
-                <li><a href="listing.html">Ottelut ja harjoitukset</a></li>
-                <li><a href="contact.html">Kokeiluharjoitus</a></li>
-            </ul>
-        </nav>
-    </header>
+  <main id="sisalto">
+    <h1>Ilmoittaudu maksuttomaan kokeiluharjoitukseen!</h1>
 
-    <main>
-        <section class="contact">
-            <h2>Ilmoittaudu maksuttomaan kokeiluharjoitukseen!</h2>
+    <p class="johdanto">
+      Haluaisitko kokeilla salibandya?
+      Lapuan Lepakot toivottaa uudet pelaajat tervetulleiksi!
+      Aikaisempaa kokemusta ei tarvita.
+    </p>
 
-            <p>
-                Haluaisitko kokeilla salibandya?
-                Lapuan Lepakot toivottaa uudet pelaajat tervetulleiksi!
-                Aikaisempaa kokemusta ei tarvita.
-            </p>
+    <!-- Entisen tule-mukaan.html:n sisältö -->
+    <section aria-labelledby="otsikko-kokeilu">
+      <h2 id="otsikko-kokeilu">Näin pääset mukaan</h2>
+      <p>Kokeiluharjoitus on tarkoitettu kaikille, jotka haluavat kokeilla salibandya, myös täysin aloittelijoille. Valmentaja ottaa uuden pelaajan vastaan hallilla.</p>
+      <ol class="vaiheet">
+        <li>Valitse sopiva joukkue <a href="listing.html">harjoitusajoista</a>.</li>
+        <li>Täytä alla oleva ilmoittautumislomake.</li>
+        <li>Tule hallille 10 minuuttia ennen harjoituksen alkua.</li>
+      </ol>
+    </section>
 
-            <p>
-                Täytä alla oleva lomake, niin pääset tutustumaan
-                seuraamme ja harjoituksiimme.
-            </p>
+    <section aria-labelledby="otsikko-mukaan">
+      <h2 id="otsikko-mukaan">Mitä mukaan?</h2>
+      <p>Sisäpelikengät, urheiluvaatteet ja juomapullo. Mailan ja suojalasit saat lainaksi seuralta.</p>
+    </section>
 
-            <form id="registrationForm">
+    <!-- Ilmoittautumislomake -->
+    <section class="contact" aria-labelledby="otsikko-lomake">
+      <h2 id="otsikko-lomake">Ilmoittautumislomake</h2>
+      <p>Täytä alla oleva lomake, niin pääset tutustumaan seuraamme ja harjoituksiimme.</p>
 
-                <div class="form-group">
-                    <label for="name">Pelaajan nimi *</label>
-                    <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        placeholder="Etunimi ja sukunimi"
-                        required
-                    >
-                </div>
+      <form id="registrationForm" class="lomake">
 
-                <div class="form-group">
-                    <label for="age">Pelaajan ikä *</label>
-                    <input
-                        type="number"
-                        id="age"
-                        name="age"
-                        min="4"
-                        max="100"
-                        placeholder="Ikä vuosina"
-                        required
-                    >
-                </div>
+        <div class="form-group">
+          <label for="name">Pelaajan nimi *</label>
+          <input type="text" id="name" name="name" autocomplete="name"
+                 placeholder="Etunimi ja sukunimi" required>
+        </div>
 
-                <div class="form-group">
-                    <label for="email">Sähköpostiosoite *</label>
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        placeholder="esimerkki@email.com"
-                        required
-                    >
-                </div>
+        <div class="form-group">
+          <label for="age">Pelaajan ikä *</label>
+          <input type="number" id="age" name="age" min="4" max="100"
+                 inputmode="numeric" placeholder="Ikä vuosina" required>
+        </div>
 
-                <div class="form-group">
-                    <label for="phone">Puhelinnumero</label>
-                    <input
-                        type="tel"
-                        id="phone"
-                        name="phone"
-                        placeholder="040 123 4567"
-                    >
-                </div>
+        <div class="form-group">
+          <label for="email">Sähköpostiosoite *</label>
+          <input type="email" id="email" name="email" autocomplete="email"
+                 placeholder="esimerkki@email.com" required>
+        </div>
 
-                <div class="form-group">
-                    <label for="team">Mihin joukkueeseen haluaisit tutustua? *</label>
+        <div class="form-group">
+          <label for="phone">Puhelinnumero</label>
+          <input type="tel" id="phone" name="phone" autocomplete="tel"
+                 placeholder="040 123 4567">
+        </div>
 
-                    <select id="team" name="team" required>
-                        <option value="">Valitse joukkue</option>
-                        <option value="juniorit">Juniorit</option>
-                        <option value="miehet">Miesten joukkue</option>
-                        <option value="naiset">Naisten joukkue</option>
-                    </select>
-                </div>
+        <div class="form-group">
+          <label for="team">Mihin joukkueeseen haluaisit tutustua? *</label>
+          <select id="team" name="team" required>
+            <option value="">Valitse joukkue</option>
+            <option value="juniorit">Juniorit</option>
+            <option value="miehet">Miesten joukkue</option>
+            <option value="naiset">Naisten joukkue</option>
+          </select>
+        </div>
 
-                <div class="form-group">
-                    <label for="message">Lisätietoja</label>
-                    <textarea
-                        id="message"
-                        name="message"
-                        rows="4"
-                        placeholder="Voit kirjoittaa tähän esimerkiksi aiemmasta pelikokemuksesta."
-                    ></textarea>
-                </div>
+        <div class="form-group">
+          <label for="message">Lisätietoja</label>
+          <textarea id="message" name="message" rows="4"
+                    placeholder="Voit kirjoittaa tähän esimerkiksi aiemmasta pelikokemuksesta."></textarea>
+        </div>
 
-                <p class="required-info">* Pakolliset kentät</p>
+        <p class="required-info">* Pakolliset kentät</p>
 
-                <button type="submit" class="button">
-                    Lähetä ilmoittautuminen
-                </button>
+        <button type="submit" class="painike">Lähetä ilmoittautuminen</button>
+      </form>
 
-            </form>
+      <div id="successMessage" class="success-message" role="status" hidden>
+        <h3>Ilmoittautuminen onnistui!</h3>
+        <p>
+          Kiitos ilmoittautumisestasi!
+          Olemme iloisia, että haluat tulla tutustumaan
+          Lapuan Lepakoiden toimintaan.
+        </p>
+      </div>
+    </section>
+  </main>
 
-            <div id="successMessage" class="success-message" hidden>
-                <h3>Ilmoittautuminen onnistui!</h3>
-                <p>
-                    Kiitos ilmoittautumisestasi!
-                    Olemme iloisia, että haluat tulla tutustumaan
-                    Lapuan Lepakoiden toimintaan.
-                </p>
-            </div>
+  <footer class="alatunniste">
+    <p>&copy; 2026 Lapuan Lepakot ry</p>
+    <p>Yhdessä enemmän – salibandyn iloa Lapualla!</p>
+  </footer>
 
-        </section>
-    </main>
+  <script>
+    const form = document.getElementById("registrationForm");
+    const successMessage = document.getElementById("successMessage");
 
-    <footer>
-        <p>&copy; 2026 Lapuan Lepakot ry</p>
-        <p>Yhdessä enemmän – salibandyn iloa Lapualla!</p>
-    </footer>
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
 
-    <script>
-        const form = document.getElementById("registrationForm");
-        const successMessage = document.getElementById("successMessage");
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
 
-        form.addEventListener("submit", function(event) {
-            event.preventDefault();
+      successMessage.hidden = false;
+      form.reset();
 
-            if (!form.checkValidity()) {
-                form.reportValidity();
-                return;
-            }
-
-            successMessage.hidden = false;
-            form.reset();
-
-            successMessage.scrollIntoView({
-                behavior: "smooth",
-                block: "center"
-            });
-        });
-    </script>
-
+      successMessage.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+      });
+    });
+  </script>
 </body>
 </html>

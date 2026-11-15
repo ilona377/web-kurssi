@@ -71,7 +71,7 @@ Sisältö: Ilmoittautumislomake virheentarkistuksella.
 
 Seuraava askel: Lähettää lomake ja saada vahvistus onnistumisesta.
 
-4. Kolme oikeaa sivustoa (vertaisanalyysi)
+4. Kolme oikeaa sivustoa 
 Vastaavat salibandyseurat:
 
 Mikä toimii: Selkeät ja isot lukujärjestykset, nopea pääsy otteluaikatauluihin mobiilissa, helppo "tule mukaan" -nappi.

@@ -1,88 +1,104 @@
-
 <!DOCTYPE html>
 <html lang="fi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Etusivu – Lapuan Lepakot ry</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Etusivu – Lapuan Lepakot ry</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <a class="ohituslinkki" href="#sisalto">Siirry sisältöön</a>
 
-    <header>
-        <h1>Lapuan Lepakot ry</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Etusivu</a></li>
-                <li><a href="about.html">Seura</a></li>
-                <li><a href="listing.html">Ottelut ja harjoitukset</a></li>
-                <li><a href="contact.html">Kokeiluharjoitus</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header class="ylatunniste">
+    <div class="ylatunniste__sisalto">
+      <a class="logo" href="index.html">Lapuan <span>Lepakot</span></a>
+      <nav class="navigaatio" aria-label="Päävalikko">
+        <ul>
+          <li><a href="index.html" aria-current="page">Etusivu</a></li>
+          <li><a href="about.html">Seura</a></li>
+          <li><a href="listing.html">Ottelut ja harjoitukset</a></li>
+          <li><a href="contact.html">Kokeiluharjoitus</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <main>
+  <main id="sisalto">
 
-        <section class="hero">
-            <h2>Tervetuloa Lapuan Lepakoihin!</h2>
+    <section class="hero" aria-labelledby="otsikko-tervetuloa">
+      <h1 id="otsikko-tervetuloa">Tervetuloa Lapuan Lepakoihin!</h1>
 
-            <p>
-                Lapuan Lepakot ry on lapualainen salibandyseura,
-                jossa liikunnan ilo, yhteisöllisyys ja hyvä
-                joukkuehenki ovat kaiken keskiössä.
-                Toimintaamme kuuluu juniori-, miesten ja naisten joukkueita.
-            </p>
+      <p class="johdanto">
+        Lapuan Lepakot ry on lapualainen salibandyseura,
+        jossa liikunnan ilo, yhteisöllisyys ja hyvä
+        joukkuehenki ovat kaiken keskiössä.
+        Toimintaamme kuuluu juniori-, miesten ja naisten joukkueita.
+      </p>
 
-            <p>
-                Meillä jokainen on tervetullut mukaan!
-                Tutustu joukkueisiimme, seuraa tulevia otteluita
-                ja löydä itsellesi sopiva tapa harrastaa salibandya.
-            </p>
+      <p>
+        Meillä jokainen on tervetullut mukaan!
+        Tutustu joukkueisiimme, seuraa tulevia otteluita
+        ja löydä itsellesi sopiva tapa harrastaa salibandya.
+      </p>
 
-            <a href="listing.html" class="button">
-                Katso ottelut ja harjoitusajat
-            </a>
+      <div class="painikkeet">
+        <a href="listing.html" class="painike">Katso ottelut ja harjoitusajat</a>
+        <a href="contact.html" class="painike painike--toissijainen">Tule kokeilemaan salibandya!</a>
+      </div>
+    </section>
 
-            <a href="contact.html" class="button">
-                Tule kokeilemaan salibandya!
-            </a>
-        </section>
+    <section aria-labelledby="otsikko-tulevat">
+      <h2 id="otsikko-tulevat">Tulevat ottelut</h2>
+      <ul class="kortit">
+        <li class="kortti kortti--seuraava">
+          <span class="joukkue">Miehet</span>
+          <h3>Lepakot – Seinäjoen Saalistajat</h3>
+          <p class="aika">La 21.11. klo 15.00</p>
+          <p class="paikka">Lapuan liikuntahalli</p>
+          <p><strong>Seuraava ottelu</strong></p>
+        </li>
+        <li class="kortti">
+          <span class="joukkue">Naiset</span>
+          <h3>Kauhavan Kärpät – Lepakot</h3>
+          <p class="aika">Su 22.11. klo 13.00</p>
+          <p class="paikka">Kauhavan urheilutalo</p>
+        </li>
+        <li class="kortti">
+          <span class="joukkue">Juniorit (P12)</span>
+          <h3>Lepakot – Alajärven Ahmat</h3>
+          <p class="aika">Su 22.11. klo 10.00</p>
+          <p class="paikka">Lapuan liikuntahalli</p>
+        </li>
+      </ul>
+      <p class="lisaa-linkki"><a href="listing.html">Kaikki ottelut ja tulokset</a></p>
+    </section>
 
-        <section class="highlights">
-            <h2>Lapuan Lepakot lyhyesti</h2>
+    <section aria-labelledby="otsikko-lyhyesti">
+      <h2 id="otsikko-lyhyesti">Lapuan Lepakot lyhyesti</h2>
+      <ul class="kortit">
+        <li class="kortti">
+          <h3>Ottelut</h3>
+          <p>Katso tulevat pelit ja edellisten otteluiden tulokset.</p>
+          <a href="listing.html">Ottelutiedot</a>
+        </li>
+        <li class="kortti">
+          <h3>Harjoitukset</h3>
+          <p>Tutustu joukkueiden harjoitusaikoihin ja -paikkoihin.</p>
+          <a href="listing.html">Harjoitusajat</a>
+        </li>
+        <li class="kortti">
+          <h3>Uudet pelaajat</h3>
+          <p>Salibandy kiinnostaa? Tule maksuttomaan kokeiluharjoitukseen!</p>
+          <a href="contact.html">Ilmoittaudu mukaan</a>
+        </li>
+      </ul>
+    </section>
 
-            <div class="highlight-card">
-                <h3>Ottelut</h3>
-                <p>
-                    Katso tulevat pelit ja edellisten otteluiden tulokset.
-                </p>
-                <a href="listing.html">Ottelutiedot</a>
-            </div>
+  </main>
 
-            <div class="highlight-card">
-                <h3>Harjoitukset</h3>
-                <p>
-                    Tutustu joukkueiden harjoitusaikoihin ja -paikkoihin.
-                </p>
-                <a href="listing.html">Harjoitusajat</a>
-            </div>
-
-            <div class="highlight-card">
-                <h3>Uudet pelaajat</h3>
-                <p>
-                    Salibandy kiinnostaa? Tule maksuttomaan
-                    kokeiluharjoitukseen!
-                </p>
-                <a href="contact.html">Ilmoittaudu mukaan</a>
-            </div>
-        </section>
-
-    </main>
-
-    <footer>
-        <p>&copy; 2026 Lapuan Lepakot ry</p>
-        <p>Yhdessä enemmän – salibandyn iloa Lapualla!</p>
-    </footer>
-
+  <footer class="alatunniste">
+    <p>&copy; 2026 Lapuan Lepakot ry</p>
+    <p>Yhdessä enemmän – salibandyn iloa Lapualla!</p>
+  </footer>
 </body>
 </html>

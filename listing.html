@@ -1,44 +1,137 @@
 <!DOCTYPE html>
 <html lang="fi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lapuan Lepakot ry - Ottelut ja Harjoitukset</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ottelut ja harjoitukset – Lapuan Lepakot ry</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Lapuan Lepakot ry</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Etusivu</a></li>
-                <li><a href="about.html">Seura</a></li>
-                <li><a href="listing.html" class="active">Ottelut & Harjoitukset</a></li>
-                <li><a href="contact.html">Kokeiluharjoitus</a></li>
-            </ul>
-        </nav>
-    </header>
+  <a class="ohituslinkki" href="#sisalto">Siirry sisältöön</a>
 
-    <main>
-        <h1>Otteluohjelma ja harjoitusajat</h1>
-        
-        <h2>Tulevat ottelut</h2>
+  <header class="ylatunniste">
+    <div class="ylatunniste__sisalto">
+      <a class="logo" href="index.html">Lapuan <span>Lepakot</span></a>
+      <nav class="navigaatio" aria-label="Päävalikko">
         <ul>
-            <li><strong>15.11. klo 14:00</strong> Lepakot vs. Seinäjoen Maila-Jussit (Kotihalli)</li>
-            <li><strong>22.11. klo 15:30</strong> Vaasan Weto vs. Lepakot (Vierasottelu)</li>
+          <li><a href="index.html">Etusivu</a></li>
+          <li><a href="about.html">Seura</a></li>
+          <li><a href="listing.html" aria-current="page">Ottelut ja harjoitukset</a></li>
+          <li><a href="contact.html">Kokeiluharjoitus</a></li>
         </ul>
+      </nav>
+    </div>
+  </header>
 
-        <h2>Menneet tulokset</h2>
-        <ul>
-            <li>Lepakot vs. Alajärven Ankkurit 5 - 3</li>
-        </ul>
+  <main id="sisalto">
+    <h1>Otteluohjelma ja harjoitusajat</h1>
+    <p class="johdanto">Tulevat pelit, menneet tulokset ja joukkueiden harjoitusajat yhdessä paikassa.</p>
 
-        <h2>Harjoitusajat</h2>
-        <p>Harjoitukset pidetään tuttuun tapaan paikallisella urheilutalolla. Kysy valmentajilta tarkemmat ryhmäkohtaiset ajat!</p>
-    </main>
+    <!-- 1. Tulevat ottelut -->
+    <section aria-labelledby="otsikko-tulevat">
+      <h2 id="otsikko-tulevat">Tulevat ottelut</h2>
+      <ul class="kortit">
+        <li class="kortti kortti--seuraava">
+          <span class="joukkue">Kotiottelu</span>
+          <h3>Lepakot – Seinäjoen Maila-Jussit</h3>
+          <p class="aika">15.11. klo 14.00</p>
+          <p class="paikka">Kotihalli</p>
+          <p><strong>Seuraava ottelu</strong></p>
+        </li>
+        <li class="kortti">
+          <span class="joukkue">Vierasottelu</span>
+          <h3>Vaasan Weto – Lepakot</h3>
+          <p class="aika">22.11. klo 15.30</p>
+          <p class="paikka">Vaasa</p>
+        </li>
+        <li class="kortti">
+          <span class="joukkue">Naiset</span>
+          <h3>Kauhavan Kärpät – Lepakot</h3>
+          <p class="aika">Su 22.11. klo 13.00</p>
+          <p class="paikka">Kauhavan urheilutalo</p>
+        </li>
+        <li class="kortti">
+          <span class="joukkue">Juniorit (P12)</span>
+          <h3>Lepakot – Alajärven Ahmat</h3>
+          <p class="aika">Su 22.11. klo 10.00</p>
+          <p class="paikka">Lapuan liikuntahalli</p>
+        </li>
+        <li class="kortti">
+          <span class="joukkue">Naiset</span>
+          <h3>Lepakot – Kurikan Kotkat</h3>
+          <p class="aika">Su 29.11. klo 14.00</p>
+          <p class="paikka">Lapuan liikuntahalli</p>
+        </li>
+        <li class="kortti">
+          <span class="joukkue">Juniorit (T14)</span>
+          <h3>Lepakot – Ilmajoen Ilves</h3>
+          <p class="aika">La 5.12. klo 11.00</p>
+          <p class="paikka">Lapuan liikuntahalli</p>
+        </li>
+      </ul>
+    </section>
 
-    <footer>
-        <p>&copy; 2026 Lapuan Lepakot ry</p>
-    </footer>
+    <!-- 2. Menneet tulokset (entinen tulokset.html) -->
+    <section aria-labelledby="otsikko-tulokset">
+      <h2 id="otsikko-tulokset">Menneet tulokset</h2>
+      <ul class="kortit">
+        <li class="kortti">
+          <span class="joukkue">Miehet</span>
+          <h3>Lepakot – Kokkolan Karhut</h3>
+          <p class="tulos">6–4 (voitto)</p>
+          <p class="paikka">La 14.11. · Lapuan liikuntahalli</p>
+        </li>
+        <li class="kortti">
+          <span class="joukkue">Juniorit (P12)</span>
+          <h3>Kauhavan Kärpät – Lepakot</h3>
+          <p class="tulos">5–2 (tappio)</p>
+          <p class="paikka">Su 8.11. · Kauhavan urheilutalo</p>
+        </li>
+        <li class="kortti">
+          <span class="joukkue">Miehet</span>
+          <h3>Lepakot – Alajärven Ankkurit</h3>
+          <p class="tulos">5–3 (voitto)</p>
+          <p class="paikka">Lapuan liikuntahalli</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 3. Harjoitusajat (entinen harjoitukset.html) -->
+    <section aria-labelledby="otsikko-harjoitukset">
+      <h2 id="otsikko-harjoitukset">Harjoitusajat</h2>
+      <p>Harjoitukset pidetään tuttuun tapaan paikallisella urheilutalolla. Kysy valmentajilta tarkemmat ryhmäkohtaiset ajat!</p>
+      <ul class="kortit">
+        <li class="kortti">
+          <span class="joukkue">Juniorit (6–9 v.)</span>
+          <h3>Maanantai</h3>
+          <p class="aika">17.00–18.00</p>
+          <p class="paikka">Lapuan liikuntahalli, kenttä 2</p>
+        </li>
+        <li class="kortti">
+          <span class="joukkue">Juniorit (10–14 v.)</span>
+          <h3>Maanantai ja keskiviikko</h3>
+          <p class="aika">18.00–19.30</p>
+          <p class="paikka">Lapuan liikuntahalli, kenttä 1</p>
+        </li>
+        <li class="kortti">
+          <span class="joukkue">Naiset</span>
+          <h3>Tiistai ja torstai</h3>
+          <p class="aika">19.00–20.30</p>
+          <p class="paikka">Lapuan liikuntahalli</p>
+        </li>
+        <li class="kortti">
+          <span class="joukkue">Miehet</span>
+          <h3>Tiistai ja torstai</h3>
+          <p class="aika">20.30–22.00</p>
+          <p class="paikka">Lapuan liikuntahalli</p>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="alatunniste">
+    <p>&copy; 2026 Lapuan Lepakot ry</p>
+    <p>Yhdessä enemmän – salibandyn iloa Lapualla!</p>
+  </footer>
 </body>
 </html>
