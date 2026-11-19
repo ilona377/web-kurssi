@@ -1,105 +1,53 @@
-Toimeksianto numerolle 25 (Nº 2): Lapuan Lepakot ry
-Lähettäjä: Jari Hietala, Vapaaehtoinen ”tietokonemies”
-Aihe: Otteluohjelmasivu Lapuan Lepakoille
-
-Moi,
-
-olen se vapaaehtoinen, joka ”hoitaa tietokonejutut” Lapuan Lepakoissa, lapualaisessa salibandyseurassa, jossa on junioreita sekä miesten ja naisten joukkue. Kaikki pyörii vapaaehtoisvoimin.
-
-Vanhemmat kysyvät jatkuvasti, milloin ja missä seuraavat pelit ovat, ja tieto on hajallaan viidessä WhatsApp-ryhmässä. He katsovat sen puhelimesta hallilla, usein hanskat kädessä. Tarvitsemme sivut, joilla näkyvät tulevat ottelut ja menneet tulokset, harjoitusajat ja se, miten mukaan pääsee.
-
-Haluaisimme myös ilmoittautumisen ilmaiseen kokeiluharjoitukseen uusille pelaajille. IT-kumppanimme yhdistää sen seuran sähköpostiin myöhemmin; nyt lomakkeen pitää huomata virheet ja kertoa selvästi, että ilmoittautuminen on valmis.
-
-Seuran värit syvä kuusenvihreä ja vaalea minttu, oranssi korostus, ja logona on toistaiseksi pelkkä nimi.
-
-Terkuin,
-
-— Jari Hietala
-
-Värit: Kuusi
-- Teksti: #12343b
-- Tausta: #eef6f4
-- Korostus: #e8742a
-
-
-
+# Projektisuunnitelma: Lapuan Lepakot ry
 
 Moi Jari,
 
-Kiitos toimeksiannosta! Tässä on lyhyt projektisuunnitelma Lapuan Lepakoiden verkkosivustoa varten. Katsothan tämän läpi, jotta voimme antaa vihreän valon työn aloittamiselle.
+kiitos toimeksiannosta! Tässä lyhyt suunnitelma Lapuan Lepakoiden sivustosta. Katso se läpi, niin pääsen aloittamaan.
 
-1. Tavoite ja vaatimukset
-Tavoite: Luoda selkeät ja mobiiliystävälliset verkkosivut salibandyseura Lapuan Lepakoille.
+## 1 Tavoite ja vaatimukset
 
-Vaatimukset: Sivustolta pitää löytyä tulevat ottelut, menneet tulokset, harjoitusajat sekä ohjeet mukaan pääsemiseen ja kokeiluharjoitukseen ilmoittautumiseen. Toteutamme sivuston vaaditulla neljän sivun rakenteella (index, about, listing, contact.html).
+Selkeät ja mobiiliystävälliset sivut, joilta otteluiden ja harjoitusten tiedot löytyvät yhdestä paikasta, eikä niitä tarvitse etsiä viidestä WhatsApp-ryhmästä.
 
-2. Kävijät
-Vanhemmat: Etsivät nopeasti ja helposti seuraavia peli- ja harjoitusaikoja (usein kiireessä tai hanskat kädessä).
+Sivuilla pitää olla tulevat ottelut, menneet tulokset, harjoitusajat, ohjeet mukaan pääsemiseen ja ilmoittautuminen ilmaiseen kokeiluharjoitukseen. Lomake huomaa virheet ja kertoo, kun ilmoittautuminen on valmis.
 
-Uudet pelaajat ja juniorit: Haluavat tietää, miten pääsee mukaan toimintaan ja miten voi ilmoittautua ilmaiseen kokeiluharjoitukseen.
+## 2 Kävijät
 
-3. Sisältösuunnitelma
-Etusivu (index.html):
+- **Vanhemmat:** etsivät nopeasti seuraavan pelin tai harjoituksen ajan ja paikan, usein puhelimella hallilla ja hanskat kädessä.
+- **Uudet pelaajat ja juniorit:** haluavat tietää, miten mukaan pääsee ja miten kokeiluharjoitukseen ilmoittaudutaan.
 
-Tarkoitus: Toivottaa kävijät tervetulleeksi ja kertoa seuran perustiedot.
+## 3 Sisältösuunnitelma
 
-Sisältö: Lyhyt esittely, logo ja pikalinkit tärkeimpiin sisältöihin.
+| Sivu | Tarkoitus | Sisältö | Seuraava askel |
+| ---- | --------- | ------- | -------------- |
+| index.html | Toivottaa tervetulleeksi | Lyhyt esittely, tulevat ottelut, pikalinkit | Otteluohjelmaan tai kokeiluun |
+| about.html | Esitellä seura | Joukkueet ja seuran arvot | Liittymään mukaan |
+| listing.html | Ajantasainen ohjelma | Tulevat pelit, tulokset, harjoitusvuorot | Ilmoittautumaan |
+| contact.html | Matalan kynnyksen ilmoittautuminen | Lomake virheentarkistuksella | Lähettää lomake ja saada vahvistus |
 
-Seuraava askel: Ohjata kävijä katsomaan otteluohjelmaa tai ilmoittautumaan kokeiluun.
+## 4 Kolme oikeaa sivustoa
 
-Seura (about.html):
+- [Erä-Viikingit](https://www.eraviikingit.fi/joukkueisiin/): **toimii:** joukkueet selkeästi ryhmiteltyinä, ja yhteyshenkilöt ja kokeiluharjoitukset löytyvät helposti. **Otan käyttöön:** "Näin pääset mukaan" -ohjeet.
+- [Loimaan Leisku](https://loimaanleisku.kotisivukone.com/): **ei toimi:** valikko toistuu kahteen kertaan, eikä etusivulla ole otteluita tai harjoitusaikoja. **Otan käyttöön:** lyhyt valikko ja ottelut suoraan etusivulle.
+- [TPS Salibandy](https://www.tpssalibandy.fi/): **toimii:** iso tervetulo-otsikko ja selkeä painike sen alla. **Otan käyttöön:** etusivun tervetulo-osio ja isot painikkeet.
 
-Tarkoitus: Esitellä seuran toimintaa ja vapaaehtoisvoimin pyörivää yhteisöä.
+## 5 Sävy
 
-Sisältö: Tietoa joukkueista (juniorit, miehet, naiset) ja seuran arvoista.
+Lähestyttävä, energinen ja yhteisöllinen. Kolme ydinviestiä:
 
-Seuraava askel: Kannustaa liittymään mukaan.
+1. Kaikki ovat tervetulleita mukaan.
+2. Toiminta pyörii isolla sydämellä ja vapaaehtoisvoimin.
+3. Tiedot löytyvät helposti ja nopeasti.
 
-Ottelut & Harjoitukset (listing.html):
+## 6 Mitä tarvitsemme teiltä
 
-Tarkoitus: Tarjota ajantasainen otteluohjelma ja harjoitusajat.
+- Otteluohjelmat, menneet tulokset ja harjoitusajat.
+- Logo ja kuvat, jos niitä on. Sillä välin käytän nimilogoa ja esimerkkitietoja.
 
-Sisältö: Tulevat pelit, menneet tulokset ja harjoitusvuorot.
+## 7 Seuraavat vaiheet
 
-Seuraava askel: Siirtyä katsomaan yhteystietoja tai ilmoittautumista.
+Kun hyväksyt suunnitelman, teen sivut valmiiksi, testaan ne puhelimella ja julkaisen ne GitHub Pagesissa.
 
-Kokeiluharjoitus / Yhteystiedot (contact.html):
+Kuulostaako hyvältä?
 
-Tarkoitus: Mahdollistaa matalan kynnyksen yhteydenotto ja kokeiluharjoitukseen ilmoittautuminen.
-
-Sisältö: Ilmoittautumislomake virheentarkistuksella.
-
-Seuraava askel: Lähettää lomake ja saada vahvistus onnistumisesta.
-
-4. Kolme oikeaa sivustoa 
-Vastaavat salibandyseurat:
-
-Mikä toimii: Selkeät ja isot lukujärjestykset, nopea pääsy otteluaikatauluihin mobiilissa, helppo "tule mukaan" -nappi.
-
-Mikä ei toimi: Monimutkaiset valikot ja vanhentunut tieto.
-
-Mitä otamme käyttöön: Pidämme rakenteen äärimmäisen selkeänä, jotta tiedot löytyvät parilla klikkauksella myös hallilla puhelimella selattaessa.
-
-5. Sävy
-Miltä sivusto kuulostaa: Lähestyttävältä, energiseltä, yhteisölliseltä ja selkeältä.
-
-Kolme ydinviestiä:
-
-Kaikki ovat tervetulleita mukaan toimintaan.
-
-Toiminta pyörii suurella sydämellä ja vapaaehtoisvoimin.
-
-Tiedot löytävät helposti ja nopeasti ajallaan.
-
-6. Mitä tarvitsemme teiltä
-Tarkat otteluohjelmat, menneet tulokset ja harjoitusajat.
-
-Mahdolliset logot ja kuvat (sillä välin käytämme väliaikaisia kuvituskuvia ja seuran nimilogoa).
-
-7. Seuraavat vaiheet
-Kun hyväksyt tämän suunnitelman, luomme sivuston valmiiksi, teemme tarvittavat testaukset ja julkaisemme sen GitHub Pagesin kautta.
-
-Miltä tämä kuulostaa? Voimmeko aloittaa toteutuksen?
-
-Ystävällisin terveisin,
+Terveisin,
 Ilona Onnela

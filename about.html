@@ -1,106 +1,99 @@
-
 <!DOCTYPE html>
 <html lang="fi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seura – Lapuan Lepakot ry</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seura – Lapuan Lepakot ry</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <a class="ohituslinkki" href="#sisalto">Siirry sisältöön</a>
 
-    <header>
-        <h1>Lapuan Lepakot ry</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Etusivu</a></li>
-                <li><a href="about.html">Seura</a></li>
-                <li><a href="listing.html">Ottelut ja harjoitukset</a></li>
-                <li><a href="contact.html">Kokeiluharjoitus</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header class="ylatunniste">
+    <div class="ylatunniste__sisalto">
+      <a class="logo" href="index.html">Lapuan <span>Lepakot</span></a>
+      <nav class="navigaatio" aria-label="Päävalikko">
+        <ul>
+          <li><a href="index.html">Etusivu</a></li>
+          <li><a href="about.html" aria-current="page">Seura</a></li>
+          <li><a href="listing.html">Ottelut ja harjoitukset</a></li>
+          <li><a href="contact.html">Kokeiluharjoitus</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <main>
-        <section class="about">
-            <h2>Tietoa seurasta</h2>
+  <main id="sisalto">
+    <h1>Tietoa seurasta</h1>
 
-            <p>
-                Lapuan Lepakot ry on lapualainen salibandyseura,
-                jonka toiminta perustuu yhteisöllisyyteen,
-                liikunnan iloon ja vapaaehtoistyöhön.
-            </p>
+    <p class="johdanto">
+      Lapuan Lepakot ry on lapualainen salibandyseura,
+      jonka toiminta perustuu yhteisöllisyyteen,
+      liikunnan iloon ja vapaaehtoistyöhön.
+    </p>
 
-            <p>
-                Tarjoamme mahdollisuuden harrastaa salibandya
-                eri ikäisille ja eri tasoisille pelaajille.
-                Meillä tärkeintä on hyvä joukkuehenki,
-                yhdessä tekeminen ja liikunnan riemu.
-            </p>
-        </section>
+    <p>
+      Tarjoamme mahdollisuuden harrastaa salibandya
+      eri ikäisille ja eri tasoisille pelaajille.
+      Meillä tärkeintä on hyvä joukkuehenki,
+      yhdessä tekeminen ja liikunnan riemu.
+    </p>
 
-        <section class="teams">
-            <h2>Joukkueemme</h2>
+    <section aria-labelledby="otsikko-joukkueet">
+      <h2 id="otsikko-joukkueet">Joukkueemme</h2>
+      <ul class="kortit">
+        <li class="kortti">
+          <h3>Juniorit</h3>
+          <p>
+            Junioritoiminnassa lapset ja nuoret pääsevät
+            oppimaan salibandyn taitoja, liikkumaan
+            ja kokemaan joukkuepelaamisen iloa.
+          </p>
+        </li>
+        <li class="kortti">
+          <h3>Miesten joukkue</h3>
+          <p>
+            Miesten joukkue tarjoaa mahdollisuuden
+            pelata tavoitteellisesti, kehittää taitoja
+            ja nauttia kilpailullisesta salibandysta.
+          </p>
+        </li>
+        <li class="kortti">
+          <h3>Naisten joukkue</h3>
+          <p>
+            Naisten joukkueessa pääsee mukaan
+            joukkuehenkeen, harjoittelemaan ja
+            pelaamaan yhdessä muiden kanssa.
+          </p>
+        </li>
+      </ul>
+    </section>
 
-            <div class="team-card">
-                <h3>Juniorit</h3>
-                <p>
-                    Junioritoiminnassa lapset ja nuoret pääsevät
-                    oppimaan salibandyn taitoja, liikkumaan
-                    ja kokemaan joukkuepelaamisen iloa.
-                </p>
-            </div>
+    <section aria-labelledby="otsikko-arvot">
+      <h2 id="otsikko-arvot">Seuramme arvot</h2>
+      <ul class="vaiheet">
+        <li>Yhteisöllisyys ja hyvä joukkuehenki</li>
+        <li>Liikunnan ilo ja hyvinvointi</li>
+        <li>Reilu peli ja toisten kunnioittaminen</li>
+        <li>Vapaaehtoistyö ja yhdessä tekeminen</li>
+      </ul>
+    </section>
 
-            <div class="team-card">
-                <h3>Miesten joukkue</h3>
-                <p>
-                    Miesten joukkue tarjoaa mahdollisuuden
-                    pelata tavoitteellisesti, kehittää taitoja
-                    ja nauttia kilpailullisesta salibandysta.
-                </p>
-            </div>
+    <section aria-labelledby="otsikko-mukaan">
+      <h2 id="otsikko-mukaan">Tule mukaan toimintaan!</h2>
+      <p>
+        Haluaisitko aloittaa salibandyharrastuksen?
+        Aikaisempaa kokemusta ei tarvita.
+        Voit tulla tutustumaan toimintaamme maksuttomassa
+        kokeiluharjoituksessa.
+      </p>
+      <a href="contact.html" class="painike">Ilmoittaudu kokeiluharjoitukseen</a>
+    </section>
+  </main>
 
-            <div class="team-card">
-                <h3>Naisten joukkue</h3>
-                <p>
-                    Naisten joukkueessa pääsee mukaan
-                    joukkuehenkeen, harjoittelemaan ja
-                    pelaamaan yhdessä muiden kanssa.
-                </p>
-            </div>
-        </section>
-
-        <section class="values">
-            <h2>Seuramme arvot</h2>
-
-            <ul>
-                <li>Yhteisöllisyys ja hyvä joukkuehenki</li>
-                <li>Liikunnan ilo ja hyvinvointi</li>
-                <li>Reilu peli ja toisten kunnioittaminen</li>
-                <li>Vapaaehtoistyö ja yhdessä tekeminen</li>
-            </ul>
-        </section>
-
-        <section class="join">
-            <h2>Tule mukaan toimintaan!</h2>
-
-            <p>
-                Haluaisitko aloittaa salibandyharrastuksen?
-                Aikaisempaa kokemusta ei tarvita.
-                Voit tulla tutustumaan toimintaamme maksuttomassa
-                kokeiluharjoituksessa.
-            </p>
-
-            <a href="contact.html" class="button">
-                Ilmoittaudu kokeiluharjoitukseen
-            </a>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2026 Lapuan Lepakot ry</p>
-        <p>Yhdessä enemmän – salibandyn iloa Lapualla!</p>
-    </footer>
-
+  <footer class="alatunniste">
+    <p>&copy; 2026 Lapuan Lepakot ry</p>
+    <p>Yhdessä enemmän – salibandyn iloa Lapualla!</p>
+  </footer>
 </body>
 </html>

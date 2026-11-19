@@ -1,22 +1,21 @@
-1. Mistä aloitin?
+# AI-loki
 
-Kysyin: Olen saanut tehtäväksi tehdä salibandyseuralle verkkosivut. Mistä aloitan ja mitä tiedostoja tarvitsen?
+Käytin Claudea. En ollut tehnyt nettisivuja ennen, joten käytin sitä aika paljon, ja osa koodista on suoraan siltä. Tarkistin kaiken itse selaimessa ja puhelimella.
 
-Tekoäly vastasi: Selitti, että sivu koostuu HTML:stä, CSS:stä ja myöhemmin JavaScriptistä. Ehdotti aloittamaan tiedostoilla index.html ja style.css.
+## E1
 
+- **Aloitus:** kysyin, mistä aloitan ja mitä tiedostoja tarvitaan. Sain selityksen HTML:stä, CSS:stä ja JS:stä sekä neuvon aloittaa index.html:llä ja style.css:llä.
+- **Rakenne:** kysyin, miten tiedot kannattaa jakaa sivuille. Tein neljä sivua (index, about, listing, contact) ja kirjoitin tekstit itse.
+- **Tekstit:** kysyin, mitä tietoja otteluista ja harjoituksista pitää näkyä. Vastaus: päivä, kello, joukkue, vastustaja ja paikka.
 
-2. Värit ja logo
+## E2
 
-Kysyin: Seuran värit ovat teksti 
-#12343b, tausta 
-#eef6f4 ja korostus 
-#e8742a. Logona on pelkkä nimi. Miten käytän näitä CSS:ssä?
+- **style.css:** pyysin yhdistämään oman style.css:ni ja E2:n vaatimukset (:root-muuttujat, 320 px, tumma tila, fokus). Tekoäly kirjoitti suurimman osan tiedostosta.
+- **Kontrasti:** tekoäly laski, että seuran oranssi #e8742a on vaalealla taustalla vain 2.75:1, ja ehdotti tekstiin tummempaa #b04f12:ta. Valkoinen teksti oranssilla napilla ei myöskään riittänyt, joten vaihdoin sen tummaksi.
+- **Sivut:** pyysin yhdistämään omat sivuni (index, listing, contact, about) samaan rakenteeseen ja tyyliin. Lomake ja sen JS ovat omiani, tekoäly lisäsi niihin tyylit.
+- **Tarkistuksen virheet:** tarkistin valitti, että listing.html:ssä on kaksi h1:tä ja että ylä- ja alatunniste ovat eri sivuilla erilaiset. Tekoäly korjasi about.html:n samaan malliin kuin muut sivut.
+- **moodboard.md:** tekoäly teki pohjan plan.md:n ja sivujeni perusteella. Valitsin itse kolme lähdesivustoa ja kerroin, mitä sain niistä.
 
-Tekoäly vastasi: Neuvoi tekemään värit CSS-muuttujiksi (:root { --teksti: #12343b; ... }), jotta niitä on helppo muuttaa myöhemmin.
+## Mitä opin
 
-
-3. Tekstisisältö
-
-Kysyin: Miten kirjoitan sivuille tekstit niin, että vanhemmat löytävät tiedon nopeasti? Mitä tietoja otteluista ja harjoituksista pitää näkyä?
-
-Tekoäly vastasi: Neuvoi pitämään tekstit lyhyinä ja selkeinä ja kertomaan otteluista ainakin päivämäärän, kellonajan, joukkueen ja vastustajan
+Opin, miten CSS-muuttujat ja tumma tila toimivat, ja ettei brändin väri aina käy tekstiin sellaisenaan. Jatkossa yritän kirjoittaa enemmän itse ja kysyä vasta, kun jumitan.
