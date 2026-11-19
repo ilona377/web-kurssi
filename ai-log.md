@@ -16,6 +16,12 @@ Käytin Claudea. En ollut tehnyt nettisivuja ennen, joten käytin sitä aika pal
 - **Tarkistuksen virheet:** tarkistin valitti, että listing.html:ssä on kaksi h1:tä ja että ylä- ja alatunniste ovat eri sivuilla erilaiset. Tekoäly korjasi about.html:n samaan malliin kuin muut sivut.
 - **moodboard.md:** tekoäly teki pohjan plan.md:n ja sivujeni perusteella. Valitsin itse kolme lähdesivustoa ja kerroin, mitä sain niistä.
 
+## E3
+
+- **Suodatin:** pyysin listing.html:ään joukkuesuodattimen (kaikki, juniorit, naiset, miehet) ja tilarivin "Näytetään X / Y". Tekoäly kirjoitti suurimman osan script.js:n kurssin kahvilaesimerkin mallilla, ja kokeilin sitä näppäimistöllä.
+- **Lomake:** pyysin muuttamaan ilmoittautumislomakkeen E3:n vaatimusten mukaiseksi: omat virheilmoitukset kenttien alle, fokus ensimmäiseen virheeseen, valmis-viesti role="status" ja luonnos localStorageen. Tekoäly kirjoitti koodin, ja tarkistin, että virheet häviävät, kun korjaan kentän.
+- **Popover:** tekoäly lisäsi kaikkien sivujen valikkoon "Hyvä tietää" -popoverin, joka aukeaa ja sulkeutuu Enterillä ja Escillä.
+
 ## Mitä opin
 
 Opin, miten CSS-muuttujat ja tumma tila toimivat, ja ettei brändin väri aina käy tekstiin sellaisenaan. Jatkossa yritän kirjoittaa enemmän itse ja kysyä vasta, kun jumitan.

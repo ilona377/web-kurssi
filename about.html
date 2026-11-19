@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Seura – Lapuan Lepakot ry</title>
   <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
 </head>
 <body>
   <a class="ohituslinkki" href="#sisalto">Siirry sisältöön</a>
@@ -18,6 +19,14 @@
           <li><a href="about.html" aria-current="page">Seura</a></li>
           <li><a href="listing.html">Ottelut ja harjoitukset</a></li>
           <li><a href="contact.html">Kokeiluharjoitus</a></li>
+          <li class="hyva-tietaa">
+            <button type="button" id="info-button" class="navigaatio__painike" popovertarget="info-menu">Hyvä tietää</button>
+            <ul id="info-menu" class="info-valikko" popover>
+              <li><a href="contact.html#otsikko-mukaan">Mitä harjoituksiin mukaan?</a></li>
+              <li><a href="listing.html#otsikko-harjoitukset">Harjoitusajat</a></li>
+              <li><a href="about.html#otsikko-arvot">Seuran arvot</a></li>
+            </ul>
+          </li>
         </ul>
       </nav>
     </div>

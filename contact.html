@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kokeiluharjoitus – Lapuan Lepakot ry</title>
   <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
 </head>
 <body>
   <a class="ohituslinkki" href="#sisalto">Siirry sisältöön</a>
@@ -18,6 +19,14 @@
           <li><a href="about.html">Seura</a></li>
           <li><a href="listing.html">Ottelut ja harjoitukset</a></li>
           <li><a href="contact.html" aria-current="page">Kokeiluharjoitus</a></li>
+          <li class="hyva-tietaa">
+            <button type="button" id="info-button" class="navigaatio__painike" popovertarget="info-menu">Hyvä tietää</button>
+            <ul id="info-menu" class="info-valikko" popover>
+              <li><a href="contact.html#otsikko-mukaan">Mitä harjoituksiin mukaan?</a></li>
+              <li><a href="listing.html#otsikko-harjoitukset">Harjoitusajat</a></li>
+              <li><a href="about.html#otsikko-arvot">Seuran arvot</a></li>
+            </ul>
+          </li>
         </ul>
       </nav>
     </div>
@@ -49,65 +58,66 @@
     </section>
 
     <!-- Ilmoittautumislomake -->
-    <section class="contact" aria-labelledby="otsikko-lomake">
+    <section aria-labelledby="otsikko-lomake">
       <h2 id="otsikko-lomake">Ilmoittautumislomake</h2>
-      <p>Täytä alla oleva lomake, niin pääset tutustumaan seuraamme ja harjoituksiimme.</p>
+      <p class="huomautus">Lomake ei ole vielä yhteydessä seuran sähköpostiin. Se tarkistaa ilmoittautumisen ja kertoo, kun se on valmis.</p>
 
-      <form id="registrationForm" class="lomake">
+      <form id="ilmoittautuminen" class="lomake">
+        <p class="required-info">Tähdellä (*) merkityt kentät ovat pakollisia.</p>
 
         <div class="form-group">
-          <label for="name">Pelaajan nimi *</label>
-          <input type="text" id="name" name="name" autocomplete="name"
-                 placeholder="Etunimi ja sukunimi" required>
+          <label for="nimi">Pelaajan nimi *</label>
+          <input type="text" id="nimi" name="nimi" autocomplete="name" required
+                 aria-describedby="nimi-error">
+          <p class="virhe" id="nimi-error"></p>
         </div>
 
         <div class="form-group">
-          <label for="age">Pelaajan ikä *</label>
-          <input type="number" id="age" name="age" min="4" max="100"
-                 inputmode="numeric" placeholder="Ikä vuosina" required>
+          <label for="ika">Pelaajan ikä *</label>
+          <p class="vihje" id="ika-vihje">Vuosina, 4–100.</p>
+          <input type="number" id="ika" name="ika" min="4" max="100" inputmode="numeric" required
+                 aria-describedby="ika-vihje ika-error">
+          <p class="virhe" id="ika-error"></p>
         </div>
 
         <div class="form-group">
-          <label for="email">Sähköpostiosoite *</label>
-          <input type="email" id="email" name="email" autocomplete="email"
-                 placeholder="esimerkki@email.com" required>
+          <label for="sahkoposti">Sähköpostiosoite *</label>
+          <input type="email" id="sahkoposti" name="sahkoposti" autocomplete="email" required
+                 aria-describedby="sahkoposti-error">
+          <p class="virhe" id="sahkoposti-error"></p>
         </div>
 
         <div class="form-group">
-          <label for="phone">Puhelinnumero</label>
-          <input type="tel" id="phone" name="phone" autocomplete="tel"
-                 placeholder="040 123 4567">
+          <label for="puhelin">Puhelinnumero</label>
+          <p class="vihje" id="puhelin-vihje">Vapaaehtoinen. Numerot, välilyönnit ja +.</p>
+          <input type="tel" id="puhelin" name="puhelin" autocomplete="tel" pattern="[0-9 +]{7,20}"
+                 aria-describedby="puhelin-vihje puhelin-error">
+          <p class="virhe" id="puhelin-error"></p>
         </div>
 
         <div class="form-group">
-          <label for="team">Mihin joukkueeseen haluaisit tutustua? *</label>
-          <select id="team" name="team" required>
+          <label for="joukkue">Joukkue, johon haluat tutustua *</label>
+          <select id="joukkue" name="joukkue" required aria-describedby="joukkue-error">
             <option value="">Valitse joukkue</option>
-            <option value="juniorit">Juniorit</option>
-            <option value="miehet">Miesten joukkue</option>
-            <option value="naiset">Naisten joukkue</option>
+            <option value="Juniorit">Juniorit</option>
+            <option value="Miesten joukkue">Miesten joukkue</option>
+            <option value="Naisten joukkue">Naisten joukkue</option>
           </select>
+          <p class="virhe" id="joukkue-error"></p>
         </div>
 
         <div class="form-group">
-          <label for="message">Lisätietoja</label>
-          <textarea id="message" name="message" rows="4"
-                    placeholder="Voit kirjoittaa tähän esimerkiksi aiemmasta pelikokemuksesta."></textarea>
+          <label for="viesti">Lisätietoja</label>
+          <p class="vihje" id="viesti-vihje">Vapaaehtoinen, esimerkiksi aiempi pelikokemus. Enintään 500 merkkiä.</p>
+          <textarea id="viesti" name="viesti" rows="4" maxlength="500"
+                    aria-describedby="viesti-vihje viesti-error"></textarea>
+          <p class="virhe" id="viesti-error"></p>
         </div>
 
-        <p class="required-info">* Pakolliset kentät</p>
-
-        <button type="submit" class="painike">Lähetä ilmoittautuminen</button>
+        <button type="submit">Tarkista ilmoittautuminen</button>
       </form>
 
-      <div id="successMessage" class="success-message" role="status" hidden>
-        <h3>Ilmoittautuminen onnistui!</h3>
-        <p>
-          Kiitos ilmoittautumisestasi!
-          Olemme iloisia, että haluat tulla tutustumaan
-          Lapuan Lepakoiden toimintaan.
-        </p>
-      </div>
+      <p id="lomake-tila" class="lomake-tila" role="status"></p>
     </section>
   </main>
 
@@ -116,26 +126,5 @@
     <p>Yhdessä enemmän – salibandyn iloa Lapualla!</p>
   </footer>
 
-  <script>
-    const form = document.getElementById("registrationForm");
-    const successMessage = document.getElementById("successMessage");
-
-    form.addEventListener("submit", function (event) {
-      event.preventDefault();
-
-      if (!form.checkValidity()) {
-        form.reportValidity();
-        return;
-      }
-
-      successMessage.hidden = false;
-      form.reset();
-
-      successMessage.scrollIntoView({
-        behavior: "smooth",
-        block: "center"
-      });
-    });
-  </script>
 </body>
 </html>

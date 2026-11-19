@@ -17,6 +17,7 @@
 	--color-primary-text: #b04f12;  /* oranssi TEKSTI (linkit) – 4.8:1 */
 	--color-on-primary: #0b2227;    /* teksti oranssin painikkeen päällä – 5.5:1 */
 	--color-border: #c9dfda;
+	--color-error: #b3261e;         /* virheteksti – 6.0:1 */
 
 	/* Fontit */
 	--font-base: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
@@ -47,6 +48,7 @@
 		--color-muted: #b9d3cd;         /* 8.4:1 */
 		--color-primary-text: #f0955a;  /* 5.8:1 korttien päällä */
 		--color-border: #24515a;
+		--color-error: #ffb4ab;         /* 7.1:1 kortilla */
 	}
 }
 
@@ -420,4 +422,139 @@ textarea::placeholder {
 	.kortit {
 		grid-template-columns: repeat(3, 1fr);
 	}
+}
+/* ---------- 12. E3: Hyvä tietää -popover (kaikilla sivuilla) ---------- */
+.navigaatio__painike {
+	min-height: var(--touch-size);
+	padding: 0 var(--space-m);
+	border: 2px solid var(--color-border);
+	border-radius: var(--radius);
+	background: transparent;
+	color: var(--color-text);
+	font-weight: 600;
+}
+
+.navigaatio__painike:hover {
+	filter: none;
+	border-color: var(--color-primary);
+}
+
+#info-button {
+	anchor-name: --info;
+}
+
+/* Suljettuna piilossa. Ilman tätä .navigaatio ul { display: flex } pitäisi
+   valikon aina näkyvissä, koska se ohittaa selaimen popover-säännön. */
+.navigaatio .info-valikko:not(:popover-open) {
+	display: none;
+}
+
+.navigaatio .info-valikko {
+	flex-direction: column;
+	gap: 0;
+	position-anchor: --info;
+	position-area: bottom span-right;
+	position-try-fallbacks: flip-block, flip-inline;
+	inset: auto;
+	margin: var(--space-xs) 0 0;
+	padding: var(--space-s);
+	list-style: none;
+	min-width: 15rem;
+	max-width: calc(100vw - 2rem);
+	background: var(--color-surface);
+	color: var(--color-text);
+	border: 2px solid var(--color-primary);
+	border-radius: var(--radius);
+	box-shadow: 0 0.5rem 1.5rem rgb(0 0 0 / 0.2);
+}
+
+.navigaatio .info-valikko a {
+	border-color: transparent;
+	display: flex;
+	align-items: center;
+	min-height: var(--touch-size);
+	padding: 0 var(--space-m);
+	color: var(--color-text);
+	border-radius: var(--radius);
+}
+
+.navigaatio .info-valikko a:hover {
+	background: var(--color-background);
+}
+
+/* Selaimet, jotka eivät tunne ankkurointia: valikko yläreunaan keskelle */
+@supports not (anchor-name: --info) {
+	.navigaatio .info-valikko {
+		inset: 5rem auto auto auto;
+		margin-inline: auto;
+	}
+}
+
+/* ---------- 13. E3: joukkuesuodatin (listing.html) ---------- */
+.suodatin {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--space-s);
+	margin-bottom: var(--space-s);
+}
+
+.suodatin button {
+	background: transparent;
+	color: var(--color-text);
+	border: 2px solid var(--color-primary);
+}
+
+.suodatin button[aria-pressed="true"] {
+	background: var(--color-primary);
+	color: var(--color-on-primary);
+}
+
+.suodatin-tila {
+	font-weight: 600;
+	margin-bottom: var(--space-l);
+}
+
+.tyhja {
+	color: var(--color-muted);
+	font-style: italic;
+}
+
+/* ---------- 14. E3: lomakkeen virheet ja valmis-viesti (contact.html) ---------- */
+.huomautus,
+.vihje {
+	color: var(--color-muted);
+	font-size: var(--font-size-small);
+}
+
+.vihje {
+	margin: 0 0 var(--space-xs);
+}
+
+.form-group [aria-invalid="true"] {
+	border-color: var(--color-error);
+	border-left-width: 0.5rem;
+}
+
+.virhe {
+	margin: var(--space-xs) 0 0;
+	color: var(--color-error);
+	font-weight: 600;
+}
+
+.virhe:empty {
+	display: none;
+}
+
+.lomake-tila {
+	max-width: 36rem;
+	font-weight: 600;
+}
+
+.lomake-tila:not(:empty) {
+	margin-top: var(--space-l);
+	padding: var(--space-m);
+	background: var(--color-surface);
+	border: 2px solid var(--color-primary);
+	border-left-width: 8px;
+	border-radius: var(--radius);
 }
