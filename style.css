@@ -558,3 +558,34 @@ textarea::placeholder {
 	border-left-width: 8px;
 	border-radius: var(--radius);
 }
+
+/* ---------- 15. E4: rajapinnasta ladattu data ---------- */
+/* Lista himmenee, kun sitä päivitetään */
+.kortit[aria-busy="true"] {
+	opacity: 0.5;
+}
+
+.suodatin-tila.is-error,
+.harjoitus-viesti.is-error {
+	color: var(--color-error);
+}
+
+.harjoitus-viesti {
+	color: var(--color-muted);
+}
+
+.tulos--odottaa {
+	font-size: var(--font-size-base);
+	font-weight: 600;
+	color: var(--color-muted);
+}
+
+.erat {
+	color: var(--color-muted);
+	font-size: var(--font-size-small);
+}
+
+.yhteyshenkilo {
+	margin-top: var(--space-m);
+	font-weight: 600;
+}

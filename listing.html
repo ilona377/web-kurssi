@@ -34,7 +34,7 @@
 
   <main id="sisalto">
     <h1>Otteluohjelma ja harjoitusajat</h1>
-    <p class="johdanto">Tulevat pelit, menneet tulokset ja joukkueiden harjoitusajat yhdessä paikassa.</p>
+    <p class="johdanto">Kaikkien joukkueiden tulevat pelit, tulokset ja harjoitusajat yhdessä paikassa. Tiedot päivittyvät suoraan seuran otteluohjelmasta.</p>
 
     <div class="suodatin" role="group" aria-label="Näytä joukkue">
       <button type="button" data-suodatin="kaikki" aria-pressed="true">Kaikki</button>
@@ -42,111 +42,51 @@
       <button type="button" data-suodatin="naiset" aria-pressed="false">Naiset</button>
       <button type="button" data-suodatin="miehet" aria-pressed="false">Miehet</button>
     </div>
-    <p id="suodatin-tila" class="suodatin-tila" role="status">Näytetään kaikki joukkueet.</p>
+    <p id="ottelu-tila" class="suodatin-tila" role="status"></p>
 
-    <!-- 1. Tulevat ottelut -->
+    <!-- 1. Tulevat ottelut (rajapinnasta) -->
     <section aria-labelledby="otsikko-tulevat">
       <h2 id="otsikko-tulevat">Tulevat ottelut</h2>
-      <ul class="kortit">
-        <li data-joukkue="juniorit" class="kortti kortti--seuraava">
-          <span class="joukkue">Juniorit (P12)</span>
-          <h3>Lepakot – Alajärven Ahmat</h3>
-          <p class="aika">Su 22.11. klo 10.00</p>
-          <p class="paikka">Lapuan liikuntahalli</p>
-          <p><strong>Seuraava ottelu</strong></p>
-        </li>
-        <li data-joukkue="naiset" class="kortti">
-          <span class="joukkue">Naiset</span>
-          <h3>Kauhavan Kärpät – Lepakot</h3>
-          <p class="aika">Su 22.11. klo 13.00</p>
-          <p class="paikka">Kauhavan urheilutalo</p>
-        </li>
-        <li data-joukkue="miehet" class="kortti">
-          <span class="joukkue">Miehet · vierasottelu</span>
-          <h3>Vaasan Weto – Lepakot</h3>
-          <p class="aika">Su 22.11. klo 15.30</p>
-          <p class="paikka">Vaasa</p>
-        </li>
-        <li data-joukkue="naiset" class="kortti">
-          <span class="joukkue">Naiset</span>
-          <h3>Lepakot – Kurikan Kotkat</h3>
-          <p class="aika">Su 29.11. klo 14.00</p>
-          <p class="paikka">Lapuan liikuntahalli</p>
-        </li>
-        <li data-joukkue="juniorit" class="kortti">
-          <span class="joukkue">Juniorit (T14)</span>
-          <h3>Lepakot – Ilmajoen Ilves</h3>
-          <p class="aika">La 5.12. klo 11.00</p>
-          <p class="paikka">Lapuan liikuntahalli</p>
-        </li>
-      </ul>
-      <p class="tyhja" hidden>Ei tämän joukkueen tietoja tässä osiossa.</p>
+      <ul id="tulevat-lista" class="kortit"></ul>
+      <p class="tyhja" hidden>Ei tulevia otteluita tällä valinnalla.</p>
     </section>
 
-    <!-- 2. Menneet tulokset (entinen tulokset.html) -->
+    <!-- 2. Tulokset (rajapinnasta, uusin ensin) -->
     <section aria-labelledby="otsikko-tulokset">
-      <h2 id="otsikko-tulokset">Menneet tulokset</h2>
-      <ul class="kortit">
-        <li data-joukkue="miehet" class="kortti">
-          <span class="joukkue">Miehet · kotiottelu</span>
-          <h3>Lepakot – Seinäjoen Maila-Jussit</h3>
-          <p class="tulos">Tulos päivitetään pian</p>
-          <p class="paikka">Su 15.11. · Kotihalli</p>
-        </li>
-        <li data-joukkue="miehet" class="kortti">
-          <span class="joukkue">Miehet</span>
-          <h3>Lepakot – Kokkolan Karhut</h3>
-          <p class="tulos">6–4 (voitto)</p>
-          <p class="paikka">La 14.11. · Lapuan liikuntahalli</p>
-        </li>
-        <li data-joukkue="juniorit" class="kortti">
-          <span class="joukkue">Juniorit (P12)</span>
-          <h3>Kauhavan Kärpät – Lepakot</h3>
-          <p class="tulos">5–2 (tappio)</p>
-          <p class="paikka">Su 8.11. · Kauhavan urheilutalo</p>
-        </li>
-        <li data-joukkue="miehet" class="kortti">
-          <span class="joukkue">Miehet</span>
-          <h3>Lepakot – Alajärven Ankkurit</h3>
-          <p class="tulos">5–3 (voitto)</p>
-          <p class="paikka">Lapuan liikuntahalli</p>
-        </li>
-      </ul>
-      <p class="tyhja" hidden>Ei tämän joukkueen tietoja tässä osiossa.</p>
+      <h2 id="otsikko-tulokset">Tulokset</h2>
+      <ul id="tulokset-lista" class="kortit"></ul>
+      <p class="tyhja" hidden>Ei tuloksia tällä valinnalla.</p>
     </section>
 
-    <!-- 3. Harjoitusajat (entinen harjoitukset.html) -->
+    <!-- 3. Harjoitusajat (rajapinnan /customer-tiedoista) -->
     <section aria-labelledby="otsikko-harjoitukset">
       <h2 id="otsikko-harjoitukset">Harjoitusajat</h2>
-      <p>Harjoitukset pidetään tuttuun tapaan paikallisella urheilutalolla. Kysy valmentajilta tarkemmat ryhmäkohtaiset ajat!</p>
-      <ul class="kortit">
-        <li data-joukkue="juniorit" class="kortti">
-          <span class="joukkue">Juniorit (6–9 v.)</span>
-          <h3>Maanantai</h3>
-          <p class="aika">17.00–18.00</p>
-          <p class="paikka">Lapuan liikuntahalli, kenttä 2</p>
-        </li>
-        <li data-joukkue="juniorit" class="kortti">
-          <span class="joukkue">Juniorit (10–14 v.)</span>
-          <h3>Maanantai ja keskiviikko</h3>
-          <p class="aika">18.00–19.30</p>
-          <p class="paikka">Lapuan liikuntahalli, kenttä 1</p>
-        </li>
-        <li data-joukkue="naiset" class="kortti">
-          <span class="joukkue">Naiset</span>
-          <h3>Tiistai ja torstai</h3>
-          <p class="aika">19.00–20.30</p>
-          <p class="paikka">Lapuan liikuntahalli</p>
-        </li>
-        <li data-joukkue="miehet" class="kortti">
-          <span class="joukkue">Miehet</span>
-          <h3>Tiistai ja torstai</h3>
-          <p class="aika">20.30–22.00</p>
-          <p class="paikka">Lapuan liikuntahalli</p>
-        </li>
-      </ul>
-      <p class="tyhja" hidden>Ei tämän joukkueen tietoja tässä osiossa.</p>
+      <p id="harjoitus-viesti" class="harjoitus-viesti"></p>
+      <ul id="harjoitus-lista" class="kortit"></ul>
+      <p class="tyhja" hidden>Ei harjoitusvuoroja tällä valinnalla.</p>
+      <p id="yhteyshenkilo" class="yhteyshenkilo" hidden></p>
     </section>
+
+    <!-- Korttien pohjat: app.js täyttää ne textContentilla -->
+    <template id="ottelu-pohja">
+      <li class="kortti">
+        <span class="joukkue"></span>
+        <h3 class="kortti__ottelu"></h3>
+        <p class="aika"></p>
+        <p class="paikka"></p>
+        <p class="tulos"></p>
+        <p class="erat"></p>
+      </li>
+    </template>
+
+    <template id="harjoitus-pohja">
+      <li class="kortti">
+        <span class="joukkue"></span>
+        <h3 class="kortti__paiva"></h3>
+        <p class="aika"></p>
+        <p class="paikka"></p>
+      </li>
+    </template>
   </main>
 
   <footer class="alatunniste">

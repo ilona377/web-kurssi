@@ -22,6 +22,13 @@ Käytin Claudea. En ollut tehnyt nettisivuja ennen, joten käytin sitä aika pal
 - **Lomake:** pyysin muuttamaan ilmoittautumislomakkeen E3:n vaatimusten mukaiseksi: omat virheilmoitukset kenttien alle, fokus ensimmäiseen virheeseen, valmis-viesti role="status" ja luonnos localStorageen. Tekoäly kirjoitti koodin, ja tarkistin, että virheet häviävät, kun korjaan kentän.
 - **Popover:** tekoäly lisäsi kaikkien sivujen valikkoon "Hyvä tietää" -popoverin, joka aukeaa ja sulkeutuu Enterillä ja Escillä.
 
+## E4
+
+- **Data rajapinnasta:** pyysin tekemään E4:n luennon 7 tarkistuslistan mukaan. Tekoäly haki seuran datan kurssin rajapinnasta (customer=2) ja kirjoitti app.js:ään koodin, joka näyttää ottelut, tulokset ja harjoitusajat sieltä. Keksityt esimerkkiottelut poistuivat.
+- **Neljä tilaa:** latausviesti, virheviesti, tyhjä lista ja 429-tilanne, jossa sivu odottaa, yrittää uudelleen ja luovuttaa kolmen yrityksen jälkeen. Puuttuvat tiedot (null) korvataan tekstillä, esimerkiksi "Paikka ilmoitetaan myöhemmin".
+- **Suodatin:** E3:n joukkuesuodatin toimii nyt ladatuille otteluille ja harjoitusajoille. Rajapinnan joukkueet P12, T12 ja P15 näkyvät junioreina.
+- **Testaus:** tekoäly testasi kaikki tilat. Itse kokeilin sivua selaimessa ja katsoin Network-välilehdeltä, että pyynnöt menevät oikealle asiakasnumerolle.
+
 ## Mitä opin
 
 Opin, miten CSS-muuttujat ja tumma tila toimivat, ja ettei brändin väri aina käy tekstiin sellaisenaan. Jatkossa yritän kirjoittaa enemmän itse ja kysyä vasta, kun jumitan.

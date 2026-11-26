@@ -57,29 +57,21 @@
     </section>
 
     <section aria-labelledby="otsikko-tulevat">
-      <h2 id="otsikko-tulevat">Tulevat ottelut</h2>
-      <ul class="kortit">
-        <li class="kortti kortti--seuraava">
-          <span class="joukkue">Juniorit (P12)</span>
-          <h3>Lepakot – Alajärven Ahmat</h3>
-          <p class="aika">Su 22.11. klo 10.00</p>
-          <p class="paikka">Lapuan liikuntahalli</p>
-          <p><strong>Seuraava ottelu</strong></p>
-        </li>
+      <h2 id="otsikko-tulevat">Seuraavat ottelut</h2>
+      <p id="ottelu-tila" class="suodatin-tila" role="status"></p>
+      <ul id="tulevat-lista" class="kortit" data-enintaan="3"></ul>
+      <p class="lisaa-linkki"><a href="listing.html">Kaikki ottelut, tulokset ja harjoitusajat</a></p>
+
+      <template id="ottelu-pohja">
         <li class="kortti">
-          <span class="joukkue">Naiset</span>
-          <h3>Kauhavan Kärpät – Lepakot</h3>
-          <p class="aika">Su 22.11. klo 13.00</p>
-          <p class="paikka">Kauhavan urheilutalo</p>
+          <span class="joukkue"></span>
+          <h3 class="kortti__ottelu"></h3>
+          <p class="aika"></p>
+          <p class="paikka"></p>
+          <p class="tulos"></p>
+          <p class="erat"></p>
         </li>
-        <li class="kortti">
-          <span class="joukkue">Miehet · vierasottelu</span>
-          <h3>Vaasan Weto – Lepakot</h3>
-          <p class="aika">Su 22.11. klo 15.30</p>
-          <p class="paikka">Vaasa</p>
-        </li>
-      </ul>
-      <p class="lisaa-linkki"><a href="listing.html">Kaikki ottelut ja tulokset</a></p>
+      </template>
     </section>
 
     <section aria-labelledby="otsikko-lyhyesti">
